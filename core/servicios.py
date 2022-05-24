@@ -27,12 +27,12 @@ def post_productos(dato):
 
 
 def put_productos(dato):
-    url = 'http://localhost/webservicephp/controller/producto.php?REQUEST_METHOD=PUT'
+    url = 'https://webservicejoldan.herokuapp.com/controller/producto.php?REQUEST_METHOD=PUT'
     respuesta = requests.put(url, json = dato)
     return respuesta    
 
 
 def delete_productos(dato):
-    url = 'http://localhost/webservicephp/controller/producto.php?REQUEST_METHOD=PEPE'
+    url = 'https://webservicejoldan.herokuapp.com/controller/producto.php??REQUEST_METHOD=PEPE'
     respuesta = requests.post(url, json = dato)
     return respuesta   
