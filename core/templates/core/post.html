@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    
+   
+    <!--BOOTSTRAP CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    
+    <!--link del css-->
+    <link type="text/css" rel="stylesheet" href="{% static 'core/css/formulario.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static '#' %}">
+<style>   
+</style>   
+</head>
+<body>
+
+    <div class="container">
+
+      <form action="post_producto" method="POST">
+        {% csrf_token %}
+        ID : <input type="text" name="idproducto" ><br><br>
+        Imagen : <input type="text" name="imagen1" ><br><br>
+        Nombre : <input type="text" name="nombre1" ><br><br>
+        Descripcion : <input type="text" name="descripcion1" ><br><br>
+        Precio : <input type="text" name="precio1" ><br><br>
+        Disponible : <input type="text" name="disponible1" ><br><br>
+        Tipo producto : <input type="text" name="tipoproducto" ><br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+
+
+</body>
+</html>
